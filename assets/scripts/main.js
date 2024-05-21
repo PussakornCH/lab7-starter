@@ -67,8 +67,9 @@ function saveRecipesToStorage(recipes) {
  * <button>.
  */
 function initFormHandler() {
+	
 	// B2. TODO - Get a reference to the <form> element
-	let form = document.querySelector('form');
+	let form = document.querySelector('#new-recipe');
 
 	// B3. TODO - Add an event listener for the 'submit' event, which fires when the
 	//            submit button is clicked
@@ -87,7 +88,7 @@ function initFormHandler() {
         });
 
 	// B6. TODO - Create a new <recipe-card> element
-		let recipeCard = document.createElement('recipe-card');
+		let recipeCard = document.createElement('receipe-card');
 
 	// B7. TODO - Add the recipeObject data to <recipe-card> using element.data
 		recipeCard.data = recipeObject;
@@ -106,7 +107,7 @@ function initFormHandler() {
 	});
 
 	// B10. TODO - Get a reference to the "Clear Local Storage" button
-	let clearButton = document.querySelector('#clear-storage');
+	let clearButton = document.querySelector('.danger');
 
 	// B11. TODO - Add a click event listener to clear local storage button
 	clearButton.addEventListener('click', () => {
@@ -118,4 +119,5 @@ function initFormHandler() {
 		let main = document.querySelector('main');
 		main.innerHTML = '';
 	});
+	
 }
